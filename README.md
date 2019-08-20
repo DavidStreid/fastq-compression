@@ -6,7 +6,6 @@
 * bzip2/pbzip2
 * xz
 * pigz
-* (7z)
 
 ### Specialized Methods for Genetic Data (w/ Reference)
 * Fqzcomp/FastQz
@@ -15,16 +14,17 @@
 * Gtz (Reference: https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz)
 
 ## Results
-| Algorithm  | Compressed Size | Compression Ratio  | Time        |
-| ---------- | --------------- | ------------------ | ----------- |
-| None       | 12393856        | 1                  | 0           |
-| gzip       | 3671296         | 0.2962190298       | 31m44.590s  |
-| bzip2      | 3016552         | 0.2433909189       | 9m11.744s   |
-| pbzip2     | 3015288         | 0.2432889328       | 3m29.235s   |
-| xz         | 2916464         | 0.2353153046       | 124m48.642s |
-| pigz       | 3671744         | 0.2962551768       | 3m48.276s   |
-| gtz        | 1133924         | 0.09149081609      | 2m1.774s    |
+| Algorithm  | Compressed Size | Compression Ratio  | Time        | CPU (%)* | MEM*    |
+| ---------- | --------------- | ------------------ | ----------- | -------- | ------- |
+| None       | 12393856        | 1                  | 0           | 0        | 0       | 
+| gzip       | 3671296         | 0.2962190298       | 31m44.590s  | 99.7     | 624K    |
+| bzip2      | 3016552         | 0.2433909189       | 9m11.744s   | 99.9     | 6816K   |
+| pbzip2     | 3015288         | 0.2432889328       | 3m29.235s   | 1538.8   | 22M+    |
+| xz         | 2916464         | 0.2353153046       | 124m48.642s | 99.9     | 360M+   |
+| pigz       | 3671744         | 0.2962551768       | 3m48.276s   |          |         |
+| gtz        | 1133924         | 0.09149081609      | 2m1.774s    | 197.3    | 1.49G+  |
 
+\* Taken from ```top```
 ## Development
 ## Install 
 ### MAC
@@ -53,7 +53,7 @@ TODO - script to download all fastqs
 
 ### Run
 ```
-$ mkdir compression
+$ mkdir compressed
 $ mkdir fastq                                       # Add fastq files here
 $ ./compression_test.sh > logs/compression.log      # Reads from fastq folder
 ```
@@ -62,9 +62,12 @@ $ ./compression_test.sh > logs/compression.log      # Reads from fastq folder
 For the generic options, the best compression (slowest time) option was selected. 
 
 ## Notes
-Run ```top``` command while running script to view cpu load. All generic algori
-xz
+Run ```top``` command while running script to view cpu load
+
+MAC
 ```
+$ top -u
+
 PID    COMMAND      %CPU      TIME     #TH    #WQ   #PORT MEM    PURG   CMPRS  PGRP  PPID  STATE    BOOSTS            %CPU_ME %CPU_OTHRS UID
 28472  xz           99.9      00:58.15 1/1    0     10    360M+  0B     0B     25742 28471 running  *0[1]             0.00000 0.00000    1774903000
 31836  gzip         99.7      00:53.51 1/1    0     10    624K   0B     0B     25742 31835
@@ -72,7 +75,10 @@ PID    COMMAND      %CPU      TIME     #TH    #WQ   #PORT MEM    PURG   CMPRS  P
 32686  pbzip2       1538.8    10:35.51 20/17  0     33    22M+   0B     0B     25742 32685 running  *0[1]             0.00000 0.00000    1774903000 40868+    63       37         13         355433+    304        833505+     15       0
 ```
 
+LINUX
 ```
+$ top       # 'P' to sort by CPU
+
 PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
 12602 streidd   20   0 2752972   1.4g  16788 S 197.3 18.7   3:30.84 gtz
 ```

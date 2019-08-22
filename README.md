@@ -47,15 +47,15 @@ Gtz Download - https://github.com/Genetalks/gtz
 * LICENSING NOTE - If you're using gtz, you must agree to a licensing agreement where you can't decompile or reverse engineer the software at all. You also must agree to participate "in the User Experience Improvement Program". This requires that users
 update to the latest version every 6 months and that GeneTalks will be allowed to collect "software operating parameters through the HTTPS protocol, including CPU usage, memory usage, compressed file size, output file, size, compression ratio, etc". Not sure what is included in "etc". See ```supplemental/gtz_license.md```
 ### Setup
-TODO - setup directories (fastq, compressed, & log)
-
-TODO - script to download all fastqs 
+```
+$ mkdir fastq    # Add fastq files here
+```
 
 ### Run
+While running, creates two directories to output compressed & decompressed files 
 ```
-$ mkdir compressed
-$ mkdir fastq                                       # Add fastq files here
-$ ./compression_test.sh > logs/compression.log      # Reads from fastq folder
+$ ./compression_test.sh > compress.log &
+$ tail -f compress.log
 ```
 
 ## Implementation

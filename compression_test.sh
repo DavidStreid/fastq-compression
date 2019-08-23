@@ -25,7 +25,7 @@ compress_gtz(){
 decompress_gtz(){
   local compressed_file=$2
   local output_file=$3
-  { time eval "$path_to_gtz -d $compressed_file > $output_file 2>/dev/null"; } 2>&1
+  { time eval "$path_to_gtz -d $compressed_file -c > $output_file 2>/dev/null"; } 2>&1
 }
 
 test(){

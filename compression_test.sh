@@ -20,14 +20,14 @@ compress_gtz(){
   local file=$1
   local algo=$2
   local compressed_file=$3
-  { time eval "$path_to_gtz $file -o $compressed_file 2>/dev/null"; } 2>&1
+  { time eval "$algo $file -o $compressed_file 2>/dev/null"; } 2>&1
 }
 
 decompress_gtz(){
   local algo=$1
   local compressed_file=$2
   local output_file=$3
-  { time gtz -d $compressed_file > $output_file; } 2>&1
+  { time eval "$algo -d $compressed_file > $output_file 2>/dev/null"; } 2>&1
 }
 
 test(){
@@ -61,7 +61,7 @@ do
 	  test $file $algo compress_generic decompress_generic
 	done
 
-  test $file $algo compress_gtz decompress_gtz
+  test $file $path_to_gtz compress_gtz decompress_gtz
 done
 
 # cleanup

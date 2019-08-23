@@ -38,9 +38,9 @@ test(){
   local compressed_file="./compressed/${root##*/}.$algo"
   local decompressed_file="./decompressed/${root##*/}_$algo.fastq"
 
-  echo "Compressing with $algo"
+  echo "$algo compression: $file -> $compressed_file"
   $compress_func $file $algo $compressed_file
-  echo "Decompressing with $algo"
+  echo "$algo decompression: $compressed_file -> $decompressed_file"
   $decompress_func $algo $compressed_file $decompressed_file
   du $decompressed_file
   cmp --silent $decompressed_file $file || echo "Lossy compression: $algo on $file ($decompressed_file)"

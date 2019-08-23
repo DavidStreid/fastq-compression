@@ -40,6 +40,7 @@ test(){
 
   echo "$algo compression: $file -> $compressed_file"
   $compress_func $file $algo $compressed_file
+  du $compressed_file
   echo "$algo decompression: $compressed_file -> $decompressed_file"
   $decompress_func $algo $compressed_file $decompressed_file
   du $decompressed_file

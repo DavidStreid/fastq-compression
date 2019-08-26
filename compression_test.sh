@@ -40,10 +40,10 @@ test(){
 
   echo "$algo compression: $file -> $compressed_file"
   $compress_func $file $algo $compressed_file
-  du $compressed_file
+  du -k $compressed_file
   echo "$algo decompression: $compressed_file -> $decompressed_file"
   $decompress_func $algo $compressed_file $decompressed_file
-  du $decompressed_file
+  du -k $decompressed_file
   cmp --silent $decompressed_file $file || echo "Lossy compression: $algo on $file ($decompressed_file)"
   rm $decompressed_file
 }
@@ -54,7 +54,7 @@ mkdir -p compressed
 
 for file in ./fastq/*.fastq; 
 do
-	eval "du $file"
+	eval "du -k $file"
 	for algo in "${COMPRESSION_ALGOS[@]}"
 	do
 	  test $file $algo compress_generic decompress_generic

@@ -64,8 +64,8 @@ do
 done
 
 # cleanup
-rm -rf $decompressed
-rm -rf $compressed
+rm -rf decompressed
+rm -rf compressed
 
 
 

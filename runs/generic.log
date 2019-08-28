@@ -1,0 +1,280 @@
+12393856	./fastq/SRR062634_2.filt.fastq
+Compressing with gzip
+
+real	31m10.137s
+user	31m6.420s
+sys	0m6.308s
+Decompressing with gzip
+
+real	0m32.433s
+user	0m29.832s
+sys	0m2.361s
+12415104	./decompressed/SRR062634_2.filt_decomp.gzip
+Compressing with bzip2
+
+real	5m46.208s
+user	5m43.966s
+sys	0m4.739s
+Decompressing with bzip2
+
+real	2m52.665s
+user	2m43.749s
+sys	0m8.313s
+12419856	./decompressed/SRR062634_2.filt_decomp.bzip2
+Compressing with pbzip2
+
+real	0m50.116s
+user	12m50.527s
+sys	0m9.937s
+Decompressing with pbzip2
+
+real	0m37.084s
+user	9m35.371s
+sys	0m5.422s
+12410688	./decompressed/SRR062634_2.filt_decomp.pbzip2
+Compressing with xz
+
+real	126m44.801s
+user	126m30.710s
+sys	0m21.426s
+Decompressing with xz
+
+real	1m32.419s
+user	1m25.314s
+sys	0m6.250s
+12420512	./decompressed/SRR062634_2.filt_decomp.xz
+Compressing with pigz
+
+real	4m5.098s
+user	61m14.976s
+sys	0m16.784s
+Decompressing with pigz
+
+real	0m19.003s
+user	0m18.687s
+sys	0m4.370s
+12405824	./decompressed/SRR062634_2.filt_decomp.pigz
+12505664	./fastq/SRR062635_1.filt.fastq
+Compressing with gzip
+
+real	29m18.890s
+user	29m15.341s
+sys	0m6.059s
+Decompressing with gzip
+
+real	0m34.718s
+user	0m31.702s
+sys	0m2.745s
+12499776	./decompressed/SRR062635_1.filt_decomp.gzip
+Compressing with bzip2
+
+real	6m0.832s
+user	5m58.200s
+sys	0m5.069s
+Decompressing with bzip2
+
+real	3m3.074s
+user	2m53.969s
+sys	0m8.383s
+12517464	./decompressed/SRR062635_1.filt_decomp.bzip2
+Compressing with pbzip2
+
+real	0m53.063s
+user	13m10.244s
+sys	0m11.780s
+Decompressing with pbzip2
+
+real	0m39.926s
+user	9m46.828s
+sys	0m6.272s
+12487896	./decompressed/SRR062635_1.filt_decomp.pbzip2
+Compressing with xz
+
+real	130m46.847s
+user	130m29.188s
+sys	0m23.864s
+Decompressing with xz
+
+real	1m34.804s
+user	1m27.670s
+sys	0m6.322s
+12518608	./decompressed/SRR062635_1.filt_decomp.xz
+Compressing with pigz
+
+real	3m52.564s
+user	59m28.670s
+sys	0m15.380s
+Decompressing with pigz
+
+real	0m20.124s
+user	0m19.816s
+sys	0m4.563s
+12488960	./decompressed/SRR062635_1.filt_decomp.pigz
+12757184	./fastq/SRR062641_1.filt.fastq
+Compressing with gzip
+
+real	31m21.715s
+user	31m16.171s
+sys	0m7.392s
+Decompressing with gzip
+
+real	0m37.318s
+user	0m33.569s
+sys	0m2.986s
+12771456	./decompressed/SRR062641_1.filt_decomp.gzip
+Compressing with bzip2
+
+real	6m9.912s
+user	6m6.916s
+sys	0m5.990s
+Decompressing with bzip2
+
+real	3m4.865s
+user	2m55.319s
+sys	0m8.857s
+12746904	./decompressed/SRR062641_1.filt_decomp.bzip2
+Compressing with pbzip2
+
+real	0m52.876s
+user	13m22.186s
+sys	0m11.066s
+Decompressing with pbzip2
+
+real	0m39.110s
+user	9m58.507s
+sys	0m5.832s
+12746528	./decompressed/SRR062641_1.filt_decomp.pbzip2
+Compressing with xz
+
+real	131m24.017s
+user	131m8.642s
+sys	0m22.548s
+Decompressing with xz
+
+real	1m32.747s
+user	1m26.007s
+sys	0m6.150s
+12747104	./decompressed/SRR062641_1.filt_decomp.xz
+Compressing with pigz
+
+real	3m40.053s
+user	57m57.515s
+sys	0m9.956s
+Decompressing with pigz
+
+real	0m19.303s
+user	0m19.059s
+sys	0m4.265s
+12759808	./decompressed/SRR062641_1.filt_decomp.pigz
+12360448	./fastq/SRR077487_1.filt.fastq
+Compressing with gzip
+
+real	25m6.677s
+user	25m4.626s
+sys	0m5.005s
+Decompressing with gzip
+
+real	0m31.859s
+user	0m29.143s
+sys	0m2.345s
+12357120	./decompressed/SRR077487_1.filt_decomp.gzip
+Compressing with bzip2
+
+real	5m46.262s
+user	5m43.879s
+sys	0m4.699s
+Decompressing with bzip2
+
+real	2m49.932s
+user	2m41.723s
+sys	0m7.741s
+12354312	./decompressed/SRR077487_1.filt_decomp.bzip2
+Compressing with pbzip2
+
+real	0m51.119s
+user	13m10.999s
+sys	0m8.889s
+Decompressing with pbzip2
+
+real	0m38.406s
+user	9m58.989s
+sys	0m5.518s
+12343392	./decompressed/SRR077487_1.filt_decomp.pbzip2
+Compressing with xz
+
+real	120m49.425s
+user	120m41.391s
+sys	0m16.852s
+Decompressing with xz
+
+real	1m27.357s
+user	1m20.982s
+sys	0m5.963s
+12354928	./decompressed/SRR077487_1.filt_decomp.xz
+Compressing with pigz
+
+real	3m11.345s
+user	50m15.438s
+sys	0m9.514s
+Decompressing with pigz
+
+real	0m18.517s
+user	0m18.397s
+sys	0m4.154s
+12355712	./decompressed/SRR077487_1.filt_decomp.pigz
+12355648	./fastq/SRR081241_1.filt.fastq
+Compressing with gzip
+
+real	25m7.420s
+user	25m5.590s
+sys	0m5.020s
+Decompressing with gzip
+
+real	0m31.747s
+user	0m29.287s
+sys	0m2.254s
+12356160	./decompressed/SRR081241_1.filt_decomp.gzip
+Compressing with bzip2
+
+real	5m44.390s
+user	5m42.078s
+sys	0m4.666s
+Decompressing with bzip2
+
+real	2m50.269s
+user	2m41.640s
+sys	0m7.967s
+12354208	./decompressed/SRR081241_1.filt_decomp.bzip2
+Compressing with pbzip2
+
+real	0m50.864s
+user	13m6.785s
+sys	0m8.900s
+Decompressing with pbzip2
+
+real	0m38.296s
+user	9m57.785s
+sys	0m5.348s
+12341632	./decompressed/SRR081241_1.filt_decomp.pbzip2
+Compressing with xz
+
+real	120m36.898s
+user	120m28.704s
+sys	0m16.892s
+Decompressing with xz
+
+real	1m27.131s
+user	1m20.819s
+sys	0m5.907s
+12357904	./decompressed/SRR081241_1.filt_decomp.xz
+Compressing with pigz
+
+real	3m11.356s
+user	50m5.060s
+sys	0m10.157s
+Decompressing with pigz
+
+real	0m18.522s
+user	0m18.409s
+sys	0m4.122s
+12359424	./decompressed/SRR081241_1.filt_decomp.pigz

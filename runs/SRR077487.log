@@ -1,0 +1,39 @@
+6168884	./fastq/SRR077487_1.filt.fastq
+gzip compression: ./fastq/SRR077487_1.filt.fastq -> ./compressed/SRR077487_1.filt.gzip
+
+real	34m57.524s
+user	34m51.282s
+sys	0m17.847s
+1851120	./compressed/SRR077487_1.filt.gzip
+gzip decompression: ./compressed/SRR077487_1.filt.gzip -> ./decompressed/SRR077487_1.filt_gzip.fastq
+
+real	0m45.956s
+user	0m42.157s
+sys	0m3.630s
+6168884	./decompressed/SRR077487_1.filt_gzip.fastq
+bzip2 compression: ./fastq/SRR077487_1.filt.fastq -> ./compressed/SRR077487_1.filt.bzip2
+
+real	9m33.637s
+user	9m26.977s
+sys	0m19.218s
+1516792	./compressed/SRR077487_1.filt.bzip2
+bzip2 decompression: ./compressed/SRR077487_1.filt.bzip2 -> ./decompressed/SRR077487_1.filt_bzip2.fastq
+
+real	4m1.312s
+user	3m52.604s
+sys	0m8.411s
+6168884	./decompressed/SRR077487_1.filt_bzip2.fastq
+gtz compression: ./fastq/SRR077487_1.filt.fastq -> ./compressed/SRR077487_1.filt.gtz
+license to professional.
+Notice: Update this software before 2019-12-13 to get more powerful feature.
+
+real	2m5.894s
+user	3m49.612s
+sys	0m7.753s
+1163328	./compressed/SRR077487_1.filt.gtz
+gtz decompression: ./compressed/SRR077487_1.filt.gtz -> ./decompressed/SRR077487_1.filt_gtz.fastq
+
+real	2m31.177s
+user	4m42.943s
+sys	0m8.666s
+6168884	./decompressed/SRR077487_1.filt_gtz.fastq

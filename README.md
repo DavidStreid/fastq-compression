@@ -44,19 +44,51 @@ Gtz Download - https://github.com/Genetalks/gtz
 update to the latest version every 6 months and that GeneTalks will be allowed to collect "software operating parameters through the HTTPS protocol, including CPU usage, memory usage, compressed file size, output file, size, compression ratio, etc". Not sure what is included in "etc". See ```supplemental/gtz_license.md```
 
 ### Run
-While running, creates two directories to output compressed & decompressed files 
 ```
-$ ./fastq_download.sh                       # Downloads all fastq files
-$ ./compression_test.sh > compress.log      # Runs compression test 
-$ tail -f ./compress.log                      # Shows logging
+$ ./fastq_download.sh                       # Creates "fastq" directory and downloads all fastq files to it
+$ ./compression_test.sh > compress.log      # Runs compression test
+$ tail -f ./compress.log                    # Shows logging
 ```
 
 ## Implementation
-For the generic options, the best compression (slowest time) option was selected. 
+This was run for SRR062634, SRR062635, SRR062641, SRR077487, & SRR081241 of "HG00096" from the 1000 Genomes Project (ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/HG00096/sequence_read/). The Decompression Rate, Compression Rate, & Compression Ratio shown in the results table are the average of the five runs (see "runs" folder for individual results).
+### Genric Algorithms: 
+* Best compression (slowest time) option was selected
+* Results were obtained running on a 2.3 GHz i9 Processor, 16 GB RAM
+* Logs: ```./runs/generic.log```
+### Specialized Algorithms: 
+* Default options were selected
+* Logs: ```./runs/{FILE}.log```, e.g. ```./runs/SRR062634.log```. The test was run with a reference to a generic algo. 
+* NOTE - Comparing the generic references included in the logs to their runs in ```./runs/generic.log```, it seems the same file was compressed/decompressed faster on mac than on the linux virtual machine. This indicates GTZ actually has a faster rate then what is shown in the results table. See Below.
 
-## Data
-All files were taken from the 1000 Genomes Project
-* HG00096: ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/HG00096/sequence_read/
+#### ```runs/generic.log```
+```
+gzip compression: ./fastq/SRR062634_2.filt.fastq -> ./compressed/SRR062634_2.filt.gzip
 
+real	29m24.739s
+user	29m22.648s
+sys	0m5.210s
+1835648	./compressed/SRR062634_2.filt.gzip
+gzip decompression: ./compressed/SRR062634_2.filt.gzip -> ./decompressed/SRR062634_2.filt_gzip.fastq
 
+real	0m32.607s
+user	0m29.571s
+sys	0m2.531s
+6198048	./decompressed/SRR062634_2.filt_gzip.fastq
+```
 
+#### ```runs/SRR062634.log```
+```
+gzip compression: ./fastq/SRR062634_2.filt.fastq -> ./compressed/SRR062634_2.filt.gzip
+
+real	40m46.277s
+user	40m40.093s
+sys	0m17.391s
+1822600	./compressed/SRR062634_2.filt.gzip
+gzip decompression: ./compressed/SRR062634_2.filt.gzip -> ./decompressed/SRR062634_2.filt_gzip.fastq
+
+real	0m45.747s
+user	0m41.967s
+sys	0m3.542s
+6196724	./decompressed/SRR062634_2.filt_gzip.fastq
+```

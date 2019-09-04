@@ -1,5 +1,23 @@
 # Compression Project
 
+## Introduction
+Genomes are big. It’s a simple alphabet of A’s, G’s, C’s, & T’s, but comprises the long 3 billion base pair string representing the human genome. As the number of Next-Generation Sequencing projects rapidly grows, many institutions must confront a pressing storage issue - solutions that worked at a smaller scale before will be a headache to maintain or need to be replaced with a more scalable solution.
+​​
+
+​​Since Next-generation technologies usually spit out a massive number of short reads, a popular format for seeing sequencing results is FASTQ. FASTQ contains repeating, 2-part lines of suspected nucleotide sequences & the confidence for each call in the sequence. Below is an example showing the nucleotide sequence separated from its quality scores by a “+” sign and identified by the sequence ID, “@SEQ_ID”.
+```​​
+​​@SEQ_ID
+​​GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
+​​+
+​​!''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
+```
+[Reference](https://en.m.wikipedia.org/wiki/FASTQ_format)
+
+​​
+​​An uncompressed human genome in FASTQ format can be around 5-10 GB and will take up a significant chunk of hard drive space. That’s why compression is a necessity for storage and distribution. The most popular compressed format is a gzipped file. If you download files from the publicly available [1000 Genomes project](https://gtz.io/GCF_000001405.37_GRCh38.p11_genomic.fna.gz) or are granted access to any files from the [European Bioinformatics Insitute](https://www.ebi.ac.uk/ena/browse/read-download) you will receive them as .fastq.gz files. These gzipped files are convenient to decompress (usually in less than a minute) and a common format expected by many third-party analysis and transformation tools. But while .gz FASTQ files have a respectable compression ratio [of about 30%](http://www.softpanorama.org/HPC/DNA_sequencing/Genomic_data_compression/index.shtml), when you have hundreds or thousands of 2-3 GB .fastq.gz files, storage can still be a concern. To stretch out budgets for storage hardware, hospitals, researchers, and genomics companies may need to investigate alternatives to .gz files that can store more with less.
+​​
+​​This project investigates alternative compression formats and compares them to the .gz gold standard in compression ratio/rate, decompression rate, and resource utilization for CPU & memory. The results show that many algorithms - bzip2, pbzip2, xz, and GTZ - offer more efficient storage. Improvements of the different compression algorithms over gzip ranged from nearly triple the compression rate to fractions of the time needed to compress. The clear winner for both runtime and compression rate was a specialized algorithm tailored for sequencing data called [GTX.ZIP, or GTZ](https://github.com/Genetalks/gtz). However, the generic algorithm bzip2 performed about 20% better than gzip due to its ability to take advantage of the genome’s short alphabet and repeat structure via Burroughs-Wheeler transform and Move-to-Front encoding. If storage is an issue, both bzip2 and GTZ offer better utilization of the amount of storage space available. 
+
 ## Algorithms Tested
 ### Generic Methods
 * gzip
